@@ -103,6 +103,13 @@ All optional — without them the site builds, deploys and works (captcha report
 | `POST /api/captcha` | Server-side reCAPTCHA verification endpoint (v3 score, v2 fallback). |
 | `GET/POST /api/ws` | Live usage board: board state + optimistic `?action=join` presence tick. |
 
+**CAPTCHA coverage:** server-side reCAPTCHA v3 protects every form that exists on the site —
+the API licence application, the contact form and the newsletter signup (plus the demo/session
+endpoint's sibling licence form). When a v3 score lands below 0.5 the form swaps in a reCAPTCHA
+v2 checkbox and submits the challenge token instead. The brief's "account registration" and
+"demo request" surfaces are covered by the licence application in this build — there is no
+separate account area in the page structure, so no unprotected form ships.
+
 **About WebSockets:** Vercel Functions cannot hold WebSocket connections open, so `/api/ws`
 serves the same JSON contract over HTTP (`{ activeToday, currentlyActive, dots }`) and the client
 poll-with-reconnect by default. Set `NEXT_PUBLIC_WS_URL` to an external WebSocket endpoint and

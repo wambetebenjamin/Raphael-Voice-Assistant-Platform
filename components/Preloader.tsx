@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Wordmark from "@components/Wordmark";
 
 /**
  * EFFECT-25 — waveform preloader.
@@ -49,6 +50,8 @@ export default function Preloader() {
   return (
     <div className="preloader" data-done={done} data-skippable={skippable}>
       <div className="flex flex-col items-center px-6 text-center">
+        {/* EFFECT-08 wordmark, reused inside the preloader */}
+        <Wordmark mode="once" className="mb-6 h-9 w-auto text-[var(--color-primary-ink)]" />
         <div className="preloader-wave" aria-hidden="true">
           <span />
           <span />

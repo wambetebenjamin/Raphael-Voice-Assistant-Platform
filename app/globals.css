@@ -64,7 +64,7 @@
   --header-pad-y-mobile: 14px;
   --glass-blur: 18px; /* EFFECT-28: max 20px */
   --glass-tint: rgba(255, 255, 255, 0.72);
-  --bar-h: 44px; /* voice activation bar */
+  --bar-h: 56px; /* voice activation bar — fits 48px touch targets */
   --nav-h: 62px;
   --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
   --spring: cubic-bezier(0.34, 1.56, 0.64, 1);

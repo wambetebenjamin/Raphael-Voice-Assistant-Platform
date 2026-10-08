@@ -54,14 +54,14 @@ export default function VoiceActivationBar() {
           </label>
           <input
             id="typed-command"
-            className="h-8 w-[130px] rounded-full border border-white/25 bg-white/10 px-3 text-[12px] text-white placeholder:text-white/55 focus:border-[#7fe0df] sm:w-[210px]"
+            className="h-12 w-[124px] rounded-full border border-white/25 bg-white/10 px-3 text-[12px] text-white placeholder:text-white/55 focus:border-[#7fe0df] sm:w-[210px]"
             placeholder="Type a command…"
             value={typed}
             onChange={(e) => setTyped(e.target.value)}
           />
           <button
             type="submit"
-            className="h-8 rounded-full px-3 text-[12px] font-bold text-[#062f2f] bg-[#7fe0df] hover:bg-white transition-colors"
+            className="h-12 min-w-12 rounded-full px-4 text-[12px] font-bold text-[#062f2f] bg-[#7fe0df] hover:bg-white transition-colors"
           >
             Send
           </button>
@@ -72,7 +72,7 @@ export default function VoiceActivationBar() {
           onClick={toggleMic}
           aria-pressed={micState !== "off"}
           aria-label={micState === "off" ? "Turn microphone on" : "Turn microphone off"}
-          className="flex h-9 min-w-9 items-center justify-center gap-2 rounded-full border border-white/30 px-3 text-[12px] font-bold text-white transition-colors hover:bg-white/15"
+          className="flex h-12 min-w-12 items-center justify-center gap-2 rounded-full border border-white/30 px-4 text-[12px] font-bold text-white transition-colors hover:bg-white/15"
           title={supported ? "Toggle microphone (Space)" : "Voice recognition unsupported here"}
         >
           {micState === "off" ? <Mic size={16} aria-hidden="true" /> : <MicOff size={16} aria-hidden="true" />}
