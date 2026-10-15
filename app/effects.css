@@ -225,6 +225,14 @@
 }
 
 /* ── EFFECT-04 · per-letter stagger + glitch pass on "Voice" ──────────────── */
+.headline {
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+.headline .headline-word {
+  display: inline-block;
+  white-space: nowrap;
+}
 .headline .letter {
   display: inline-block;
   opacity: 0;
@@ -235,10 +243,10 @@
 @keyframes letter-in {
   to { opacity: 1; transform: none; }
 }
-.headline .letter-space { display: inline-block; width: 0.28em; }
 .glitch {
   position: relative;
   display: inline-block;
+  white-space: nowrap;
   color: var(--color-primary-ink);
 }
 .glitch.is-glitching {
@@ -574,7 +582,7 @@
 
 /* ── EFFECT-29 · claymorphic plan buttons ─────────────────────────────────── */
 .btn-clay {
-  background: linear-gradient(145deg, #12b8b7, #0a918f);
+  background: linear-gradient(145deg, #0b7776, #084e4d);
   color: var(--color-on-primary);
   border: 0;
   border-radius: 22px;

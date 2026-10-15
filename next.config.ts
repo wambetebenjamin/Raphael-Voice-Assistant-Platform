@@ -4,8 +4,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    // All photography is local (public/images/photos) — no remote hosts needed.
-    formats: ["image/webp", "image/avif"],
+    // Site photos are local, already-compressed 500px assets. Serve them
+    // directly instead of waiting for per-request AVIF/WebP transcoding.
+    unoptimized: true,
   },
 };
 

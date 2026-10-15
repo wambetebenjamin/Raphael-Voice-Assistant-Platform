@@ -31,7 +31,7 @@ export default function PricingSection() {
             Monthly
           </button>
           <button type="button" className="btn-clay-soft motion-control px-5 py-3 text-[12px] font-bold uppercase tracking-wide" aria-pressed={annual} onClick={() => setAnnual(true)}>
-            Annual <span className="ml-1 rounded-full bg-[var(--color-primary)] px-2 py-0.5 text-[10px] text-white">−17%</span>
+            Annual <span className="ml-1 rounded-full bg-[var(--color-primary-ink)] px-2 py-0.5 text-[10px] text-white">−17%</span>
           </button>
         </div>
 
@@ -46,7 +46,7 @@ export default function PricingSection() {
                 aria-labelledby={`plan-${plan.id}`}
               >
                 {plan.recommended ? (
-                  <p className="absolute right-4 top-4 rounded-full bg-[var(--color-primary)] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+                  <p className="absolute right-4 top-4 rounded-full bg-[var(--color-primary-ink)] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
                     Most chosen
                   </p>
                 ) : null}
