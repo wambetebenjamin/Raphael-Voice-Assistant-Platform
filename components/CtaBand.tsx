@@ -7,7 +7,7 @@ import { WHATSAPP_LINK } from "@lib/site";
 /** CTA band with the waving mascot variant (EFFECT-13). */
 export default function CtaBand() {
   return (
-    <section className="section-pad bg-[var(--color-primary)] text-white" aria-labelledby="cta-title">
+    <section className="section-pad bg-[var(--color-primary-deep)] text-white" aria-labelledby="cta-title">
       <div className="container-site flex flex-col items-center gap-8 lg:flex-row">
         {/* waving mascot variant */}
         <svg viewBox="0 0 140 120" className="fx-mascot h-[130px] w-[150px] shrink-0" aria-hidden="true">
